@@ -30,16 +30,21 @@ function App() {
 
       <div className="tasklist mt-4">
         <h1>Tasklist</h1>
-        <div className="row"> 
-        
-        <div className="form-check col-auto">
-          <input className="form-check-input" type="checkbox" value="" id="" />
-          <label className="form-check-label">
-            Default checkbox
-          </label>
-        </div>
-        <button className="btn btn-outline-danger btn-sm col-auto">Delete</button>
-      </div>
+
+        {todos.map(todo => {
+          return (
+            <div className="row mb-2" key={todo.id}>
+              <div className="form-check col-auto">
+                <input className="form-check-input" type="checkbox" value="" id="" />
+                <label className="form-check-label">
+                 {todo.title}
+                </label>
+              </div>
+              <button className="btn btn-outline-danger btn-sm col-auto">Delete</button>
+            </div>
+
+          )
+        })}
       </div>
     </div>
 
