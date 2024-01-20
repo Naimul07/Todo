@@ -64,7 +64,8 @@ function App() {
                  {todo.title}
                 </label>
               </div>
-              <button className="btn btn-outline-danger btn-sm col-auto" onClick={()=> deleteButton(todo.id) }>Delete</button>
+              <button className="btn btn-outline-danger btn-sm col-auto" onClick={()=> deleteButton(todo.id) } >Delete</button>
+            
             </div>
 
           )
